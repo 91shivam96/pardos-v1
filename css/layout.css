@@ -134,6 +134,25 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__phone {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex: none;
+}
+
+.header__phone:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -261,6 +280,14 @@ body.nav-open {
     padding: 8px 0;
   }
 
+  .header__right {
+    gap: 10px;
+  }
+
+  .header__phone {
+    font-size: 0.82rem;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -331,6 +358,10 @@ body.nav-open {
 
   .header__inner {
     min-height: 64px;
+  }
+
+  .header__phone {
+    font-size: 0.75rem;
   }
 
   .nav {
