@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/popup.css" />
   </head>
   <body>
     <header class="header">
@@ -27,7 +28,12 @@
             >PARDOS <span class="logo__sub">REAL ESTATE</span></span
           >
         </a>
-        <nav class="nav">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="nav">
           <a class="nav__link" href="index.html">Home</a>
           <a class="nav__link" href="overview.html">Overview</a>
           <a class="nav__link is-active" href="floor-plan.html">Floor Plan</a>
@@ -52,28 +58,40 @@
 
           <div class="grid grid--2">
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="3 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">3 BHK</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="3 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">3 BHK</span>
+              </button>
             </article>
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="3 BHK plus study floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">3 BHK + Study</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="3 BHK plus study floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">3 BHK + Study</span>
+              </button>
             </article>
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="4 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">4 BHK</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="4 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">4 BHK</span>
+              </button>
             </article>
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="4 BHK plus servant floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">4 BHK + Servant</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="4 BHK plus servant floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">4 BHK + Servant</span>
+              </button>
             </article>
           </div>
 
@@ -99,7 +117,7 @@
         <div class="container">
           <h2 class="cta-strip__title">Request Detailed Floor Plans</h2>
           <p class="cta-strip__text">Get unit sizes, pricing and payment plan.</p>
-          <a class="btn btn--gold" href="tel:+919911555960">Enquire Now</a>
+          <a class="btn btn--gold" href="#enquire" onclick="event.preventDefault(); openPopup('Floor Plan')">Enquire Now</a>
         </div>
       </section>
     </main>
@@ -130,7 +148,40 @@
     </footer>
 
     <a class="chat-widget" href="https://wa.me/919911555960">
-      <span class="chat-widget__icon">&#9990;</span> How can I help you?
+      <span class="chat-widget__icon">&#9990;</span>
+      <span class="chat-widget__text">How can I help you?</span>
     </a>
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <button class="popup__close" id="popupClose" type="button">&times;</button>
+        <h2 class="popup__title">Get Exclusive Updates</h2>
+        <p class="popup__subtitle">Share your details to receive latest pricing, floor plans & offers.</p>
+        <form class="popup__form" id="popupForm" action="mailto:piyushawasthi0005@gmail.com" method="post" enctype="text/plain">
+          <div class="popup__group">
+            <label class="popup__label" for="popupName">Name</label>
+            <input class="popup__input" type="text" id="popupName" name="name" placeholder="Your name" required />
+          </div>
+          <div class="popup__group">
+            <label class="popup__label" for="popupPhone">Phone Number</label>
+            <div class="popup__input-wrapper">
+              <span class="popup__country-code">+91</span>
+              <input class="popup__input" type="tel" id="popupPhone" name="phone" placeholder="XXXXX XXXXX" required />
+            </div>
+          </div>
+          <div class="popup__group">
+            <label class="popup__label" for="popupInterest">Interested In</label>
+            <select class="popup__select" id="popupInterest" name="interest">
+              <option value="Price">Price Details</option>
+              <option value="Floor Plan">Floor Plan</option>
+              <option value="Brochure">Brochure</option>
+              <option value="Site Visit">Site Visit</option>
+            </select>
+          </div>
+          <button class="btn btn--gold btn--block popup__submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>

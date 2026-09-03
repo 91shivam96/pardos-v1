@@ -78,7 +78,7 @@
         <a class="logo" href="index.html">
           <img src="img/logo.png" alt="Pardos Real Estate Logo" class="logo__img" />
         </a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
           <span></span>
           <span></span>
           <span></span>
@@ -475,28 +475,40 @@
 
           <div class="grid grid--2">
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="3 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">3 BHK</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="3 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">3 BHK</span>
+              </button>
             </article>
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="3 BHK plus study floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">3 BHK + Study</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="3 BHK plus study floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">3 BHK + Study</span>
+              </button>
             </article>
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="4 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">4 BHK</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="4 BHK floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">4 BHK</span>
+              </button>
             </article>
             <article class="plan">
-              <div class="plan__img">
-                <img src="img/pardos-banner.webp" alt="4 BHK plus servant floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
-              </div>
-              <p class="plan__label">4 BHK + Servant</p>
+              <button type="button" class="plan__hit" onclick="openPopup('Floor Plan')">
+                <span class="plan__img">
+                  <img src="img/pardos-floorplan.avif" alt="4 BHK plus servant floor plan at Pardos Sakura" loading="lazy" width="1024" height="768" />
+                  <span class="plan__cta">Get Floor Plan</span>
+                </span>
+                <span class="plan__label">4 BHK + Servant</span>
+              </button>
             </article>
           </div>
 
@@ -617,6 +629,37 @@
         </div>
       </section>
 
+      <!-- About Pardos Real Estate -->
+      <section class="section" id="about">
+        <div class="container split">
+          <div class="frame">
+            <img
+              src="img/pardos-banner.webp"
+              alt="Aerial view of Pardos Sakura residential towers in Sector 90"
+              loading="lazy"
+              width="1200"
+              height="1200"
+            />
+          </div>
+          <div>
+            <h2 class="section__title section__title--left">
+              About Pardos Real Estate
+            </h2>
+            <div class="section__rule section__rule--left"></div>
+            <p>
+              Pardos Real Estate is a growing real estate company focused on developing quality residential, commercial, and industrial spaces across India. The company is present in Gurgaon, Lucknow, Dharuhera, and Mohali, with projects planned around the needs of modern residents and businesses.
+            </p>
+            <p>
+              Pardos is backed by experienced construction professionals with 40+ years of industry experience and 50+ projects delivered across India. This experience helps the company focus on practical planning, quality construction, and well-connected locations.
+            </p>
+            <p>
+              In Gurgaon, Pardos is developing Pardos Sakura, an upcoming residential project in Sector 90. The group also has projects and a growing presence in Lucknow, strengthening its footprint across key real estate markets.
+            </p>
+            <button class="btn btn--gold" onclick="event.preventDefault(); openPopup('Price')">Enquire Now</button>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQs -->
       <section class="section section--alt">
         <div class="container">
@@ -664,37 +707,6 @@
                 Sector 90 projects can also help with the decision.
               </p>
             </details>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Pardos Real Estate -->
-      <section class="section" id="about">
-        <div class="container split">
-          <div class="frame">
-            <img
-              src="img/pardos-banner.webp"
-              alt="Aerial view of Pardos Sakura residential towers in Sector 90"
-              loading="lazy"
-              width="1200"
-              height="1200"
-            />
-          </div>
-          <div>
-            <h2 class="section__title section__title--left">
-              About Pardos Real Estate
-            </h2>
-            <div class="section__rule section__rule--left"></div>
-            <p>
-              Pardos Real Estate is a growing real estate company focused on developing quality residential, commercial, and industrial spaces across India. The company is present in Gurgaon, Lucknow, Dharuhera, and Mohali, with projects planned around the needs of modern residents and businesses.
-            </p>
-            <p>
-              Pardos is backed by experienced construction professionals with 40+ years of industry experience and 50+ projects delivered across India. This experience helps the company focus on practical planning, quality construction, and well-connected locations.
-            </p>
-            <p>
-              In Gurgaon, Pardos is developing Pardos Sakura, an upcoming residential project in Sector 90. The group also has projects and a growing presence in Lucknow, strengthening its footprint across key real estate markets.
-            </p>
-            <button class="btn btn--gold" onclick="event.preventDefault(); openPopup('Price')">Enquire Now</button>
           </div>
         </div>
       </section>
@@ -791,7 +803,8 @@
     </footer>
 
     <button class="chat-widget" onclick="event.preventDefault(); openPopup()">
-      <span class="chat-widget__icon">&#9990;</span> How can I help you?
+      <span class="chat-widget__icon">&#9990;</span>
+      <span class="chat-widget__text">How can I help you?</span>
     </button>
 
     <!-- Popup Modal -->
@@ -826,73 +839,9 @@
       </div>
     </div>
 
+    <script src="js/nav.js"></script>
+    <script src="js/popup.js"></script>
     <script>
-      // Popup functionality
-      const popupOverlay = document.getElementById('popupOverlay');
-      const popupClose = document.getElementById('popupClose');
-      const popupForm = document.getElementById('popupForm');
-
-      // Function to open popup
-      function openPopup(interestValue) {
-        if (interestValue) {
-          const interestSelect = document.getElementById('popupInterest');
-          if (interestSelect) {
-            interestSelect.value = interestValue;
-          }
-        }
-        if (popupOverlay) {
-          popupOverlay.classList.add('active');
-        }
-        return false; // Prevent default behavior
-      }
-
-      // Hide popup
-      function hidePopup() {
-        if (popupOverlay) {
-          popupOverlay.classList.remove('active');
-        }
-      }
-
-      // Close popup when clicking X button
-      if (popupClose) {
-        popupClose.addEventListener('click', hidePopup);
-      }
-
-      // Close popup when clicking outside
-      if (popupOverlay) {
-        popupOverlay.addEventListener('click', (e) => {
-          if (e.target === popupOverlay) {
-            hidePopup();
-          }
-        });
-      }
-
-      // Handle form submission
-      if (popupForm) {
-        popupForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const name = document.getElementById('popupName').value;
-          const phone = document.getElementById('popupPhone').value;
-          const interest = document.getElementById('popupInterest').value;
-          
-          // Here you can send data to your server
-          console.log('Form submitted:', { name, phone, interest });
-          
-          // Hide popup after submission
-          hidePopup();
-          
-          // Reset form
-          popupForm.reset();
-        });
-      }
-
-      // Close popup with Escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && popupOverlay && popupOverlay.classList.contains('active')) {
-          hidePopup();
-        }
-      });
-
       // Navigation smooth scrolling and active state
       const navLinks = document.querySelectorAll('.nav__link');
       const sections = document.querySelectorAll('section[id]');
