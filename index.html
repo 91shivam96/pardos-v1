@@ -12,20 +12,20 @@
     <meta name="robots" content="index, follow" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://pardosgurgaon.com/" />
+    <link rel="canonical" href="https://pardos-sakura-gurgaon.com/" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pardosgurgaon.com/" />
+    <meta property="og:url" content="https://pardos-sakura-gurgaon.com/" />
     <meta property="og:title" content="Pardos Sakura Gurgaon | 3 & 4 BHK Homes in Sector 90" />
     <meta property="og:description" content="Premium 3 & 4 BHK residences in Sector 90, New Gurgaon. Japanese-inspired luxury homes with modern amenities and excellent connectivity to major locations." />
-    <meta property="og:image" content="https://pardosgurgaon.com/img/pardos-banner.webp" />
+    <meta property="og:image" content="https://pardos-sakura-gurgaon.com/img/pardos-banner.webp" />
     <meta property="og:site_name" content="Pardos Sakura Gurgaon" />
     <meta property="og:locale" content="en_IN" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://pardosgurgaon.com/" />
+    <meta name="twitter:url" content="https://pardos-sakura-gurgaon.com/" />
     <meta name="twitter:title" content="Pardos Sakura Gurgaon | 3 & 4 BHK Homes in Sector 90" />
     <meta name="twitter:description" content="Premium 3 & 4 BHK residences in Sector 90, New Gurgaon. Japanese-inspired luxury homes with modern amenities and excellent connectivity." />
     <meta name="twitter:image" content="https://pardos-sakura-gurgaon.com/img/pardos-banner.webp" />
@@ -44,8 +44,8 @@
       "@type": "RealEstateAgent",
       "name": "Pardos Real Estate",
       "description": "Premium real estate developer offering luxury residential projects in Gurgaon",
-      "url": "https://pardosgurgaon.com/",
-      "telephone": "+1234567890",
+      "url": "https://pardos-sakura-gurgaon.com",
+      "telephone": "+91 99115 55960",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Sector 90, New Gurgaon",
@@ -78,8 +78,7 @@
         <a class="logo" href="index.html">
           <img src="img/logo.png" alt="Pardos Real Estate Logo" class="logo__img" />
         </a>
-        <a class="header-phone" href="tel:+1234567890">+1234567890</a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
@@ -718,7 +717,7 @@
                 <span class="enquiry__contact-icon">&#9990;</span>
                 <span>
                   <span class="enquiry__contact-label">Call Us</span>
-                  <a class="enquiry__contact-value" href="tel:+1234567890">+1234567890</a>
+                  <a class="enquiry__contact-value" href="tel:+919911555960">+91 99115 55960</a>
                 </span>
               </div>
               <div class="enquiry__contact">
@@ -783,7 +782,7 @@
         <div>
           <h3 class="footer__title">Contact</h3>
           <p class="footer__text">Sector 90, New Gurgaon, Gurugram, Haryana</p>
-          <a class="footer__link" href="tel:+1234567890">+1234567890</a>
+          <a class="footer__link" href="tel:+919911555960">+91 99115 55960</a>
         </div>
       </div>
       <div class="container footer__bottom">
@@ -794,19 +793,6 @@
     <button class="chat-widget" onclick="event.preventDefault(); openPopup()">
       <span class="chat-widget__icon">&#9990;</span> How can I help you?
     </button>
-
-    <!-- Sticky Mobile Buttons -->
-    <div class="sticky-mobile-buttons">
-      <a class="sticky-btn sticky-btn--whatsapp" href="https://wa.me/1234567890">
-        <span>&#128222;</span> WhatsApp
-      </a>
-      <a class="sticky-btn sticky-btn--call" href="tel:+1234567890">
-        <span>&#9990;</span> Call
-      </a>
-      <button class="sticky-btn sticky-btn--enquiry" onclick="event.preventDefault(); openPopup('Price')">
-        <span>&#9993;</span> Enquiry
-      </button>
-    </div>
 
     <!-- Popup Modal -->
     <div class="popup-overlay" id="popupOverlay">
@@ -845,26 +831,6 @@
       const popupOverlay = document.getElementById('popupOverlay');
       const popupClose = document.getElementById('popupClose');
       const popupForm = document.getElementById('popupForm');
-
-      // Hamburger menu functionality
-      const hamburger = document.getElementById('hamburger');
-      const nav = document.getElementById('nav');
-
-      if (hamburger && nav) {
-        hamburger.addEventListener('click', () => {
-          hamburger.classList.toggle('active');
-          nav.classList.toggle('active');
-        });
-
-        // Close menu when clicking on nav links
-        const navLinks = document.querySelectorAll('.nav__link');
-        navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            nav.classList.remove('active');
-          });
-        });
-      }
 
       // Function to open popup
       function openPopup(interestValue) {

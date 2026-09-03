@@ -175,8 +175,8 @@
 
 /* Intro block */
 .intro__text {
-  font-size: 1rem;
-  margin-bottom: 16px;
+  font-size: 1.05rem;
+  margin-bottom: 22px;
   max-width: 880px;
   margin-left: auto;
   margin-right: auto;
@@ -299,7 +299,7 @@
   text-align: center;
   color: var(--color-body);
   font-size: 1.1rem;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -308,12 +308,12 @@
 .highlights-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .highlight-item {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   align-items: flex-start;
 }
 
@@ -333,14 +333,14 @@
 .highlight-title {
   color: var(--color-text);
   font-family: var(--font-heading);
-  font-size: 1rem;
-  margin-bottom: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
 .highlight-text {
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--color-body);
 }
 
@@ -353,15 +353,14 @@
   width: 100%;
   height: auto;
   min-height: 300px;
-  max-height: 500px;
+  max-height: 450px;
 }
 
 .highlights-image .frame img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 500px;
-  display: block;
+  max-height: 450px;
 }
 
 /* Frame styling for portrait images */

@@ -32,7 +32,7 @@
 
   /* Layout */
   --container: 1280px;
-  --section-y: 60px;
+  --section-y: 80px;
   --gap: 24px;
 
   /* Mobile-specific overrides */
@@ -52,15 +52,4 @@
 
   /* Motion */
   --ease: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Prevent layout shift */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
 }
