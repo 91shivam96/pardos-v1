@@ -91,7 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
   min-height: 90px;
 }
 
@@ -142,6 +142,12 @@
   background: var(--color-primary);
   padding: 80px 0 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 100px;
+  }
 }
 
 .footer__grid {
@@ -231,7 +237,14 @@
 
   .header__inner {
     min-height: auto;
-    padding: 14px 0;
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .header-phone {
+    display: block;
+    font-size: 0.8rem;
+    padding: 8px 12px;
   }
 
   .hamburger {

@@ -46,6 +46,84 @@
   transform: rotate(-45deg);
 }
 
+/* Header phone button */
+.header-phone {
+  display: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--ease);
+}
+
+.header-phone:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Sticky mobile buttons */
+.sticky-mobile-buttons {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  padding: 12px 16px;
+  z-index: 999;
+  gap: 8px;
+  justify-content: space-between;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-btn {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sticky-btn--whatsapp {
+  background: #25D366;
+  color: var(--color-white);
+}
+
+.sticky-btn--whatsapp:hover {
+  background: #1da851;
+}
+
+.sticky-btn--call {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.sticky-btn--call:hover {
+  background: var(--color-primary-dark);
+}
+
+.sticky-btn--enquiry {
+  background: #FFD700;
+  color: var(--color-text);
+}
+
+.sticky-btn--enquiry:hover {
+  background: #FFC107;
+}
+
 .logo__img {
   max-height: 60px;
   width: auto;
@@ -707,16 +785,19 @@
 }
 
 @media (max-width: 768px) {
-  .chat-widget {
-    right: 16px;
-    bottom: 16px;
-    padding: 10px 16px;
-    font-size: 0.75rem;
+  .header-phone {
+    display: block;
   }
 
-  .chat-widget__icon {
-    font-size: 1rem;
+  .sticky-mobile-buttons {
+    display: flex;
   }
+
+  .chat-widget {
+    display: none;
+  }
+
+
 }
 
 @media (max-width: 480px) {
