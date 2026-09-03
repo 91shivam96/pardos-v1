@@ -40,6 +40,10 @@
   text-transform: uppercase;
   transition: background var(--ease), color var(--ease), transform var(--ease),
     box-shadow var(--ease);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-body);
 }
 
 .btn--gold {
@@ -76,42 +80,42 @@
   background: var(--color-bg-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 36px 28px;
+  padding: 28px 20px;
   text-align: center;
   transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
 }
 
 .card__icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 20px;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
   border-radius: 50%;
   background: var(--color-accent-soft);
   border: 1px solid var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--color-primary);
 }
 
 .card__title {
   color: var(--color-text);
   font-family: var(--font-heading);
-  font-size: 1.35rem;
-  margin-bottom: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
 .card__text {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--color-body);
 }
 
@@ -195,32 +199,68 @@
 /* Floor plan card */
 .plan {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--color-bg-white);
   transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease);
+  display: flex;
+  flex-direction: column;
 }
 
 .plan:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
 }
 
 .plan__img {
-  padding: 26px;
+  padding: 32px;
   background: var(--color-bg-white);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan__img img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
 }
 
 .plan__label {
   background: var(--color-primary);
   color: var(--color-white);
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 16px 10px;
+  padding: 20px 12px;
+}
+
+/* Floor plans section styling */
+#floor-plan {
+  background: var(--color-bg-white);
+  padding: 100px 0;
+}
+
+#floor-plan .container {
+  max-width: 1200px;
+}
+
+#floor-plan .grid--2 {
+  gap: 32px;
+}
+
+.plans-note {
+  text-align: center;
+  max-width: 700px;
+  margin: 40px auto 0;
+  font-size: 1rem;
+  color: var(--color-body);
+  line-height: 1.6;
 }
 
 /* Coming soon block */
@@ -250,6 +290,30 @@
   color: var(--color-white);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.coming-soon__btn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 16px 32px;
+  font-size: 1rem;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all var(--ease);
+}
+
+.coming-soon__btn:hover {
+  background: var(--color-bg);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* Enquiry form section */
@@ -418,6 +482,15 @@
   .location-features {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  #floor-plan .grid--2 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -426,16 +499,16 @@
   }
 
   .location-highlight-item {
-    padding: 20px;
+    padding: 16px;
   }
 
   .time-badge {
-    font-size: 0.85rem;
-    padding: 6px 12px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
   }
 
   .location-name {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .vertical-images {
@@ -444,7 +517,7 @@
 
   .split {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .location-features {
@@ -452,22 +525,57 @@
   }
 
   .highlights-list {
-    gap: 16px;
+    gap: 14px;
+  }
+
+  #floor-plan {
+    padding: 40px 0;
+  }
+
+  .plan__img {
+    padding: 20px;
+  }
+
+  .plan__label {
+    padding: 14px 8px;
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .card__icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .card__title {
+    font-size: 1.1rem;
+  }
+
+  .card__text {
+    font-size: 0.85rem;
+  }
+
+  .grid--4 {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
   .location-highlight-item {
-    padding: 16px;
+    padding: 14px;
   }
 
   .time-badge {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
   }
 
   .location-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .location-features {
@@ -475,27 +583,82 @@
   }
 
   .highlights-list {
-    gap: 14px;
+    gap: 12px;
+  }
+
+  #floor-plan {
+    padding: 30px 0;
+  }
+
+  .plan__img {
+    padding: 16px;
+  }
+
+  .plan__label {
+    padding: 12px 6px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 16px 12px;
+  }
+
+  .card__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .card__title {
+    font-size: 1rem;
+  }
+
+  .card__text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    padding: 14px 10px;
+  }
+
+  .card__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .card__title {
+    font-size: 0.95rem;
+  }
+
+  .card__text {
+    font-size: 0.75rem;
   }
 }
 
 /* Floating whatsapp-style widget */
 .chat-widget {
   position: fixed;
-  right: 26px;
-  bottom: 26px;
+  right: 20px;
+  bottom: 20px;
   z-index: 60;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: #22c15e;
   color: var(--color-white);
-  padding: 14px 26px;
+  padding: 12px 20px;
   border-radius: 999px;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   box-shadow: var(--shadow-lg);
   transition: background var(--ease), transform var(--ease);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-body);
 }
 
 .chat-widget:hover {
@@ -504,7 +667,33 @@
 }
 
 .chat-widget__icon {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .chat-widget {
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+
+  .chat-widget__icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-widget {
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 14px;
+    font-size: 0.7rem;
+  }
+
+  .chat-widget__icon {
+    font-size: 0.9rem;
+  }
 }
 
 /* Highlights diamond grid */

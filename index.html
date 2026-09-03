@@ -3,15 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pardos Sakura Gurgaon | 3 &amp; 4 BHK Homes in Sector 90</title>
-    <meta
-      name="description"
-      content="Looking for Pardos Sakura Gurgaon? Explore 3 & 4 BHK homes in Sector 90 and get the latest floor plans, pricing, availability and project details."
-    />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Pardos Sakura Gurgaon | 3 & 4 BHK Homes in Sector 90 New Gurgaon</title>
+    <meta name="description" content="Pardos Sakura Gurgaon - Premium 3 & 4 BHK residences in Sector 90, New Gurgaon. Japanese-inspired luxury homes with modern amenities, excellent connectivity to Dwarka Expressway, NH-48, and Cyber City. Get floor plans, pricing, and availability details." />
+    <meta name="keywords" content="Pardos Sakura Gurgaon, Pardos Sector 90, 3 BHK Gurgaon, 4 BHK Gurgaon, New Gurgaon homes, Sector 90 residential, Japanese-inspired homes, luxury apartments Gurgaon, Dwarka Expressway homes, premium residences Gurgaon, Gurgaon real estate, Pardos Real Estate" />
+    <meta name="author" content="Pardos Real Estate" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pardos-sakura-gurgaon.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pardos-sakura-gurgaon.com/" />
+    <meta property="og:title" content="Pardos Sakura Gurgaon | 3 & 4 BHK Homes in Sector 90" />
+    <meta property="og:description" content="Premium 3 & 4 BHK residences in Sector 90, New Gurgaon. Japanese-inspired luxury homes with modern amenities and excellent connectivity to major locations." />
+    <meta property="og:image" content="https://pardos-sakura-gurgaon.com/img/pardos-banner.webp" />
+    <meta property="og:site_name" content="Pardos Sakura Gurgaon" />
+    <meta property="og:locale" content="en_IN" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://pardos-sakura-gurgaon.com/" />
+    <meta name="twitter:title" content="Pardos Sakura Gurgaon | 3 & 4 BHK Homes in Sector 90" />
+    <meta name="twitter:description" content="Premium 3 & 4 BHK residences in Sector 90, New Gurgaon. Japanese-inspired luxury homes with modern amenities and excellent connectivity." />
+    <meta name="twitter:image" content="https://pardos-sakura-gurgaon.com/img/pardos-banner.webp" />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#3A4D39" />
+    <meta name="msapplication-TileColor" content="#3A4D39" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Pardos Real Estate",
+      "description": "Premium real estate developer offering luxury residential projects in Gurgaon",
+      "url": "https://pardos-sakura-gurgaon.com",
+      "telephone": "+91 99115 55960",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sector 90, New Gurgaon",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122018",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -24,7 +76,7 @@
     <header class="header">
       <div class="container header__inner">
         <a class="logo" href="index.html">
-          <img src="img/logo.jpeg.jpg" alt="Pardos Real Estate Logo" class="logo__img" />
+          <img src="img/logo.png" alt="Pardos Real Estate Logo" class="logo__img" />
         </a>
         <nav class="nav">
           <a class="nav__link is-active" href="#home">Home</a>
@@ -33,7 +85,7 @@
           <a class="nav__link" href="#amenities">Amenities</a>
           <a class="nav__link" href="#gallery">Gallery</a>
           <a class="nav__link" href="#about">About</a>
-          <a class="btn btn--gold nav__btn" href="#enquire">Brochure</a>
+          <button class="btn btn--gold nav__btn" onclick="event.preventDefault(); openPopup('Brochure')">Brochure</button>
         </nav>
       </div>
     </header>
@@ -47,7 +99,7 @@
             Luxury 3 &amp; 4 BHK Residences in Sector 90, Gurgaon
           </p>
           <div class="hero__cta">
-            <a class="btn btn--gold" href="#enquire">Book Site Visit</a>
+            <button class="btn btn--gold" onclick="event.preventDefault(); openPopup('Site Visit')">Book Site Visit</button>
           </div>
         </div>
       </section>
@@ -88,7 +140,7 @@
               budget.
             </p>
             <div class="intro__actions">
-              <a class="btn btn--gold" href="#enquire">Get Floor Plan &amp; Price Details</a>
+              <button class="btn btn--gold" onclick="event.preventDefault(); openPopup('Price')">Get Floor Plan &amp; Price Details</button>
             </div>
           </div>
           <div class="frame">
@@ -97,7 +149,7 @@
               alt="Pardos Sakura Project Overview"
               loading="lazy"
               width="800"
-              height="1200"
+              height="600"
             />
           </div>
         </div>
@@ -161,32 +213,9 @@
                   alt="Pardos Sakura Entrance"
                   loading="lazy"
                   width="800"
-                  height="1200"
+                  height="500"
                 />
               </div>
-            </div>
-          </div>
-          
-          <div class="location-features">
-            <div class="location-feature">
-              <div class="location-feature__icon">&#128694;</div>
-              <h4 class="location-feature__title">Well Connected to Major Roads</h4>
-            </div>
-            <div class="location-feature">
-              <div class="location-feature__icon">&#127970;</div>
-              <h4 class="location-feature__title">Close to Business &amp; Employment Hubs</h4>
-            </div>
-            <div class="location-feature">
-              <div class="location-feature__icon">&#127891;</div>
-              <h4 class="location-feature__title">Schools &amp; Healthcare Nearby</h4>
-            </div>
-            <div class="location-feature">
-              <div class="location-feature__icon">&#127977;</div>
-              <h4 class="location-feature__title">Retail &amp; Lifestyle Conveniences</h4>
-            </div>
-            <div class="location-feature">
-              <div class="location-feature__icon">&#128200;</div>
-              <h4 class="location-feature__title">Strong Location Growth Potential</h4>
             </div>
           </div>
         </div>
@@ -284,27 +313,19 @@
       <!-- What Makes Different -->
       <section class="section section--alt">
         <div class="container">
-          <h2 class="section__title">What Makes Pardos Sakura Different?</h2>
+          <h2 class="section__title">What Makes Pardos Gurgaon Different?</h2>
           <div class="section__rule"></div>
           <p class="intro__text">
-            Pardos Sakura takes a slightly different approach to premium
-            residential living by focusing on space, thoughtful planning and the
-            overall feel of the community rather than just the apartment. The
-            project offers 3 and 4 BHK residences with contemporary architecture
-            and layouts planned around modern family needs.
+            Pardos Gurgaon takes a different approach to residential living by combining contemporary architecture with an Indo-Japanese design concept. The focus is on creating spaces that feel open, balanced and naturally connected to their surroundings.
           </p>
           <p class="intro__text">
-            Landscaped green spaces, a premium clubhouse, fitness and wellness
-            facilities, and recreational areas add useful spaces beyond the home
-            itself. Its Sector 90 location is another consideration, with access
-            towards Dwarka Expressway, NH-48 and IMT Manesar.
+            The theme draws from Japanese ideas of simplicity, greenery and thoughtful planning, while the overall design maintains a modern residential character. Pardos Sakura offers 3 and 4 BHK residences along with landscaped spaces, a clubhouse, fitness and wellness facilities, and recreational areas.
           </p>
           <p class="intro__text">
-            For buyers comparing Pardos 90 with other residential options in New
-            Gurgaon, the combination of larger home configurations, lifestyle
-            facilities and location makes it worth a closer look. The right
-            choice, however, depends on factors such as budget, floor plan,
-            commute, total cost and individual family requirements.
+            Located in Sector 90, New Gurgaon, the project offers access towards Dwarka Expressway, NH-48 and IMT Manesar. This makes location an important factor for those considering connectivity across Gurugram and nearby areas.
+          </p>
+          <p class="intro__text">
+            For buyers comparing Pardos Gurgaon with other residential options, the Indo-Japanese concept, spacious configurations, community spaces and location provide useful points to consider. Budget, floor plan, commute, total cost and personal preferences should also be considered before making a decision.
           </p>
         </div>
       </section>
@@ -312,7 +333,7 @@
       <!-- Amenities -->
       <section class="section">
         <div class="container">
-          <h2 class="section__title">Pardos Sakura Amenities</h2>
+          <h2 class="section__title">Pardos Gurgaon Amenities</h2>
           <div class="section__rule"></div>
           <div class="grid grid--4 amenities__grid">
             <article class="card">
@@ -401,14 +422,12 @@
               height="960"
             />
             <span class="coming-soon__label">Price on Request</span>
+            <button class="btn btn--gold coming-soon__btn" onclick="event.preventDefault(); openPopup('Price')">Request Price Details</button>
           </div>
           <p class="plans-note">
             Get the latest price list, payment plan and available offers directly
             from our team.
           </p>
-          <div class="intro__actions">
-            <a class="btn btn--gold" href="tel:+919911555960">Request Price Details</a>
-          </div>
         </div>
       </section>
 
@@ -480,17 +499,6 @@
             Unit sizes and layouts are indicative. Detailed carpet area and
             saleable area details will be shared on request.
           </p>
-        </div>
-      </section>
-
-      <section class="section section--cream">
-        <div class="container">
-          <h2 class="section__title">Pardos Sakura Gurgaon Master Plan</h2>
-          <div class="section__rule"></div>
-          <div class="coming-soon">
-            <img src="img/pardos-banner.webp" alt="Pardos Sakura master plan" loading="lazy" width="1280" height="960" />
-            <span class="coming-soon__label">Coming Soon</span>
-          </div>
         </div>
       </section>
 
@@ -673,20 +681,15 @@
             </h2>
             <div class="section__rule section__rule--left"></div>
             <p>
-              Pardos Sakura Gurgaon is a premium residential development by
-              Pardos Real Estate, a leading real estate development and
-              investment company delivering premium residential and commercial
-              projects with long-term value and strategic growth.
+              Pardos Real Estate is a growing real estate company focused on developing quality residential, commercial, and industrial spaces across India. The company is present in Gurgaon, Lucknow, Dharuhera, and Mohali, with projects planned around the needs of modern residents and businesses.
             </p>
-            <p>&nbsp;</p>
-            <p>At <strong>Pardos Real Estate</strong>, we believe in:</p>
-            <ul class="list-pointer">
-              <li>Building spaces that inspire</li>
-              <li>Developing projects that add value to cities</li>
-              <li>Ensuring transparency throughout the buying journey</li>
-              <li>Maintaining high standards of construction &amp; design quality</li>
-            </ul>
-            <a class="btn btn--gold" href="#enquire">Enquire Now</a>
+            <p>
+              Pardos is backed by experienced construction professionals with 40+ years of industry experience and 50+ projects delivered across India. This experience helps the company focus on practical planning, quality construction, and well-connected locations.
+            </p>
+            <p>
+              In Gurgaon, Pardos is developing Pardos Sakura, an upcoming residential project in Sector 90. The group also has projects and a growing presence in Lucknow, strengthening its footprint across key real estate markets.
+            </p>
+            <button class="btn btn--gold" onclick="event.preventDefault(); openPopup('Price')">Enquire Now</button>
           </div>
         </div>
       </section>
@@ -721,7 +724,7 @@
               </div>
             </div>
           </div>
-          <form class="enquiry__form" action="mailto:sales@pardos.in" method="get" enctype="text/plain">
+          <form class="enquiry__form" action="mailto:piyushawasthi0005@gmail.com" method="get" enctype="text/plain">
             <div class="form__grid">
               <div class="form__group">
                 <label class="form__label" for="name">Name</label>
@@ -747,28 +750,13 @@
         </div>
       </section>
 
-      <!-- Final CTA -->
-      <section class="final-cta">
-        <div class="container">
-          <h2 class="final-cta__title">Get Price / Floor Plan / Brochure / Site Visit</h2>
-          <p class="final-cta__text">
-            Connect with the Pardos Sakura sales team for the latest details.
-          </p>
-          <div class="final-cta__actions">
-            <a class="btn btn--gold" href="tel:+919911555960">Get Price</a>
-            <a class="btn btn--outline" href="tel:+919911555960">Floor Plan</a>
-            <a class="btn btn--outline" href="tel:+919911555960">Brochure</a>
-            <a class="btn btn--outline" href="tel:+919911555960">Site Visit</a>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
       <div class="container footer__grid">
         <div>
           <a class="logo" href="index.html">
-            <img src="img/logo.jpeg.jpg" alt="Pardos Real Estate Logo" class="logo__img" />
+            <img src="img/logo.png" alt="Pardos Real Estate Logo" class="logo__img" />
           </a>
           <h3 class="footer__title">Pardos Sakura</h3>
           <p class="footer__text">
@@ -797,9 +785,9 @@
       </div>
     </footer>
 
-    <a class="chat-widget" href="https://wa.me/919911555960">
+    <button class="chat-widget" onclick="event.preventDefault(); openPopup()">
       <span class="chat-widget__icon">&#9990;</span> How can I help you?
-    </a>
+    </button>
 
     <!-- Popup Modal -->
     <div class="popup-overlay" id="popupOverlay">
@@ -807,7 +795,7 @@
         <button class="popup__close" id="popupClose">&times;</button>
         <h2 class="popup__title">Get Exclusive Updates</h2>
         <p class="popup__subtitle">Share your details to receive latest pricing, floor plans & offers.</p>
-        <form class="popup__form" id="popupForm">
+        <form class="popup__form" id="popupForm" action="mailto:piyushawasthi0005@gmail.com" method="post" enctype="text/plain">
           <div class="popup__group">
             <label class="popup__label" for="popupName">Name</label>
             <input class="popup__input" type="text" id="popupName" name="name" placeholder="Your name" required />
@@ -818,6 +806,15 @@
               <span class="popup__country-code">+91</span>
               <input class="popup__input" type="tel" id="popupPhone" name="phone" placeholder="XXXXX XXXXX" required />
             </div>
+          </div>
+          <div class="popup__group">
+            <label class="popup__label" for="popupInterest">Interested In</label>
+            <select class="popup__select" id="popupInterest" name="interest">
+              <option value="Price">Price Details</option>
+              <option value="Floor Plan">Floor Plan</option>
+              <option value="Brochure">Brochure</option>
+              <option value="Site Visit">Site Visit</option>
+            </select>
           </div>
           <button class="btn btn--gold btn--block popup__submit" type="submit">Submit</button>
         </form>
@@ -830,68 +827,63 @@
       const popupClose = document.getElementById('popupClose');
       const popupForm = document.getElementById('popupForm');
 
-      // Check if user has already submitted form in this session
-      const hasSubmitted = sessionStorage.getItem('popupSubmitted');
-      const submissionTime = sessionStorage.getItem('popupSubmissionTime');
-
-      // Show popup instantly on page load
-      function showPopup() {
-        popupOverlay.classList.add('active');
+      // Function to open popup
+      function openPopup(interestValue) {
+        if (interestValue) {
+          const interestSelect = document.getElementById('popupInterest');
+          if (interestSelect) {
+            interestSelect.value = interestValue;
+          }
+        }
+        if (popupOverlay) {
+          popupOverlay.classList.add('active');
+        }
+        return false; // Prevent default behavior
       }
 
       // Hide popup
       function hidePopup() {
-        popupOverlay.classList.remove('active');
+        if (popupOverlay) {
+          popupOverlay.classList.remove('active');
+        }
       }
 
-      // Show popup on page load only if not submitted recently
-      window.addEventListener('load', () => {
-        if (!hasSubmitted) {
-          showPopup();
-        } else if (submissionTime) {
-          // Check if 15 seconds have passed since submission
-          const timeDiff = Date.now() - parseInt(submissionTime);
-          if (timeDiff > 15000) { // 15 seconds in milliseconds
-            showPopup();
-            sessionStorage.removeItem('popupSubmitted');
-            sessionStorage.removeItem('popupSubmissionTime');
-          }
-        }
-      });
-
       // Close popup when clicking X button
-      popupClose.addEventListener('click', hidePopup);
+      if (popupClose) {
+        popupClose.addEventListener('click', hidePopup);
+      }
 
       // Close popup when clicking outside
-      popupOverlay.addEventListener('click', (e) => {
-        if (e.target === popupOverlay) {
-          hidePopup();
-        }
-      });
+      if (popupOverlay) {
+        popupOverlay.addEventListener('click', (e) => {
+          if (e.target === popupOverlay) {
+            hidePopup();
+          }
+        });
+      }
 
       // Handle form submission
-      popupForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('popupName').value;
-        const phone = document.getElementById('popupPhone').value;
-        
-        // Here you can send data to your server
-        console.log('Form submitted:', { name, phone });
-        
-        // Store submission info in session storage
-        sessionStorage.setItem('popupSubmitted', 'true');
-        sessionStorage.setItem('popupSubmissionTime', Date.now().toString());
-        
-        // Hide popup after submission
-        hidePopup();
-        
-        // Reset form
-        popupForm.reset();
-      });
+      if (popupForm) {
+        popupForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('popupName').value;
+          const phone = document.getElementById('popupPhone').value;
+          const interest = document.getElementById('popupInterest').value;
+          
+          // Here you can send data to your server
+          console.log('Form submitted:', { name, phone, interest });
+          
+          // Hide popup after submission
+          hidePopup();
+          
+          // Reset form
+          popupForm.reset();
+        });
+      }
 
       // Close popup with Escape key
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+        if (e.key === 'Escape' && popupOverlay && popupOverlay.classList.contains('active')) {
           hidePopup();
         }
       });

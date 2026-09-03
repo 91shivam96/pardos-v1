@@ -212,11 +212,11 @@
 
 @media (max-width: 768px) {
   :root {
-    --section-y: 50px;
+    --section-y: var(--mobile-section-y);
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 var(--mobile-padding);
   }
 
   .section {
@@ -225,48 +225,57 @@
 
   .split {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .header__inner {
     min-height: auto;
-    padding: 16px 0;
+    padding: 14px 0;
   }
 
   .nav {
-    gap: 16px;
+    gap: 12px;
   }
 
   .nav__link {
-    font-size: 0.85rem;
-    padding: 6px 0;
+    font-size: 0.8rem;
+    padding: 4px 0;
   }
 
   .nav__btn {
-    padding: 8px 20px;
-    font-size: 0.8rem;
+    padding: 6px 16px;
+    font-size: 0.75rem;
   }
 
   .footer__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .hero__content {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .hero__title {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2rem, 8vw, 3.5rem);
   }
 
   .hero__subtitle {
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
   }
 
   .hero__cta .btn {
-    padding: 14px 32px;
-    font-size: 0.85rem;
+    padding: 12px 28px;
+    font-size: 0.8rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .section__rule {
+    width: 50px;
+    margin-bottom: 32px;
   }
 }
 
@@ -280,29 +289,74 @@
   }
 
   .nav {
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav__link {
-    font-size: 0.8rem;
-  }
-
-  .nav__btn {
-    padding: 6px 16px;
     font-size: 0.75rem;
   }
 
+  .nav__btn {
+    padding: 5px 14px;
+    font-size: 0.7rem;
+  }
+
   .hero__title {
-    font-size: clamp(2rem, 10vw, 3.5rem);
+    font-size: clamp(1.8rem, 10vw, 3rem);
   }
 
   .hero__subtitle {
-    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    font-size: clamp(0.85rem, 4vw, 1rem);
   }
 
   .hero__cta .btn {
-    padding: 12px 24px;
-    font-size: 0.8rem;
+    padding: 10px 24px;
+    font-size: 0.75rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+  }
+
+  .section__rule {
+    width: 40px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --section-y: 35px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .nav__link {
+    font-size: 0.7rem;
+  }
+
+  .nav__btn {
+    padding: 4px 12px;
+    font-size: 0.65rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.5rem, 12vw, 2.5rem);
+  }
+
+  .hero__subtitle {
+    font-size: clamp(0.8rem, 5vw, 0.95rem);
+  }
+
+  .hero__cta .btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
   }
 }
 

@@ -35,6 +35,11 @@
   --section-y: 80px;
   --gap: 24px;
 
+  /* Mobile-specific overrides */
+  --mobile-section-y: 50px;
+  --mobile-gap: 16px;
+  --mobile-padding: 14px;
+
   /* Radius */
   --radius-sm: 6px;
   --radius: 12px;
