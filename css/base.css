@@ -13,6 +13,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   background-color: var(--color-bg);
   font-weight: 400;
   letter-spacing: 0.005em;
+  overflow-x: hidden;
 }
 
 img {
@@ -62,6 +64,12 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 p {

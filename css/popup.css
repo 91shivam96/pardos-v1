@@ -175,11 +175,24 @@
 }
 
 @media (max-width: 600px) {
+  .popup-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
   .popup {
-    padding: 32px 24px;
+    padding: 28px 18px 24px;
+    max-height: min(92vh, 640px);
+    overflow-y: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .popup__title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .popup__subtitle {
+    font-size: 0.9rem;
   }
 }
