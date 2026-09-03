@@ -78,7 +78,12 @@
         <a class="logo" href="index.html">
           <img src="img/logo.png" alt="Pardos Real Estate Logo" class="logo__img" />
         </a>
-        <nav class="nav">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="nav">
           <a class="nav__link is-active" href="#home">Home</a>
           <a class="nav__link" href="#overview">Overview</a>
           <a class="nav__link" href="#floor-plan">Floor Plan</a>
@@ -826,6 +831,26 @@
       const popupOverlay = document.getElementById('popupOverlay');
       const popupClose = document.getElementById('popupClose');
       const popupForm = document.getElementById('popupForm');
+
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.getElementById('nav');
+
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on nav links
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+          });
+        });
+      }
 
       // Function to open popup
       function openPopup(interestValue) {

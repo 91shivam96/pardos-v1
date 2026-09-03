@@ -44,7 +44,7 @@
   width: 60px;
   height: 3px;
   background: var(--color-primary);
-  margin: 0 auto 48px;
+  margin: 0 auto 32px;
 }
 
 .section__rule--left {
@@ -212,7 +212,8 @@
 
 @media (max-width: 768px) {
   :root {
-    --section-y: var(--mobile-section-y);
+    --section-y: 30px;
+    --mobile-padding: 16px;
   }
 
   .container {
@@ -220,12 +221,12 @@
   }
 
   .section {
-    padding: var(--section-y) 0;
+    padding: 30px 0;
   }
 
   .split {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .header__inner {
@@ -233,18 +234,38 @@
     padding: 14px 0;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
   .nav {
-    gap: 12px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--color-primary);
+    flex-direction: column;
+    gap: 0;
+    padding: 80px 24px 24px;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav.active {
+    right: 0;
   }
 
   .nav__link {
-    font-size: 0.8rem;
-    padding: 4px 0;
+    font-size: 1rem;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav__btn {
-    padding: 6px 16px;
-    font-size: 0.75rem;
+    padding: 16px;
+    font-size: 0.9rem;
+    margin-top: 16px;
   }
 
   .footer__grid {
@@ -281,7 +302,7 @@
 
 @media (max-width: 480px) {
   :root {
-    --section-y: 40px;
+    --section-y: 30px;
   }
 
   .container {
@@ -370,7 +391,7 @@
   }
 
   .section {
-    padding: var(--section-y) 0;
+    padding: 25px 0;
   }
 
   .split {
@@ -422,11 +443,15 @@
 
 @media (max-width: 480px) {
   :root {
-    --section-y: 40px;
+    --section-y: 30px;
   }
 
   .container {
     padding: 0 12px;
+  }
+
+  .section {
+    padding: 20px 0;
   }
 
   .nav {
