@@ -38,6 +38,17 @@ a {
   text-decoration: none;
 }
 
+.brand-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.brand-link:hover {
+  color: var(--color-primary-dark);
+}
+
 ul,
 ol {
   list-style: none;
